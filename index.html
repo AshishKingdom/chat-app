@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chat Application </title>
+	<link rel="stylesheet" type="text/css" href="page.css">
+	<script type="text/javascript" src="./page.js"></script>
+</head>
+	<body onload="init()">
+	<div id="chat-app-state-2">
+		<table style="margin:0px;width: 100%;height: 100%;position: absolute;" cellspacing="0">
+			<tr>
+				<td id="navbar" colspan="2">
+					<div class="heading">Simple Messaging App
+						<button class="page-btn btn-exit" onclick="exit_chat()">EXIT</button>
+					</div>
+				</td>
+			</tr>
+			<tr style="height:80%">
+				<td id="chat-area"><iframe src="javascript:void(0)"></iframe></td>
+				<td id="online-status"><b>ONLINE - <span id="online-count">0</span></td>
+			</tr>
+			<tr>
+				<td colspan="2" id="message-area">
+					<input type="text" id="message-content" placeholder="Your Message Here" />
+					<button class="page-btn" id="btn-send">SEND</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="chat-app-state-1">
+		<div id="main-heading">Simple Messaging App</div>
+		<br>
+		<div class="login-box">
+			<div class="login-heading-1">Chat Now!!</div><br><br>
+			<div class="input-titles">Enter a Nickname</div><br>
+			<input type="text" placeholder="nickname" id="inp-nickname"/><br><br>
+			<input type="button" class="page-btn" value="ENTER" onclick="check_input()" id="btn-enter">
+			<div id="warning-msg"></div>
+		</div>
+		<br><br>
+		<footer class="footer">
+			Made with <3 by <a href="https://github.com/AshishKingdom">AshishKingdom</a>
+		</footer>
+	</div>
+</body>
+</html>
