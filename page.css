@@ -5,7 +5,9 @@ body {
 	font-family: sans-serif;
 	background-color: rgb(220, 220, 220);
 }
-
+.dark-bg {
+	background-color: rgb(50, 50, 50);
+}
 .login-box {
 	border: 2px solid rgb(40,40,40);
 	background-color: rgb(200, 200, 200);
@@ -14,6 +16,7 @@ body {
 	height: 350px;
 	width: 300px;
 	margin: auto;
+
 }
 
 .input-titles{
@@ -64,12 +67,14 @@ body {
 }
 
 #main-heading {
-	background-color: rgb(50, 50, 50);
+	/*background-color: rgb(50, 50, 50);*/
 	color : white;
 	text-align: center;
 	font-size: 36pt;
-	margin: 0 0 15pt 0;
-	padding: 20pt;
+	/*margin: 0 0 15pt 0;*/
+	/*padding: 20pt;*/
+/*	height: 10%;
+	width: 100%;*/
 }
 
 
@@ -84,13 +89,13 @@ body {
 }
 
 .footer {
-	background-color: rgb(30,30,30);
-	margin: 0 auto;
-	position: absolute;
-	width: 100%;
-	bottom: 0;
+	/*background-color: rgb(30,30,30);*/
+	/*margin: 0 auto;*/
+	/*position: absolute;*/
+	/*width: 100%;*/
+	/*bottom: 0;*/
 	color: white;
-	padding: 20px 0px;
+	/*padding: 20px 0px;*/
 	text-align: center;
 }
 
