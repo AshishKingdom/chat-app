@@ -1,6 +1,8 @@
 let login_html_content = undefined;
 let username = "", channel = "default"
 let server;
+let server_status;
+let connected = false;
 function check_input() {
 	let nick_name = document.getElementById("inp-nickname").value;
 	let warn_element = document.getElementById("warning-msg");
@@ -42,12 +44,10 @@ function init() {
 }
 
 function connect_to_server(){
-	server = new WebSocket("ws://localhost:41000");
+	server = new WebSocket("ws://192.168.0.108:41000");
 	receive_server_response(server);
-	// server.send(JSON.stringify({'etype':'new_client', "name":username}));
-	// document.getElementById("chat-app-state-1").style.display = "none";
-	// document.getElementById("chat-app-state-2").style.display = "block";
 
+	server_status = setInterval(check_server_response,2500,server);
 }
 
 function exit_chat(){

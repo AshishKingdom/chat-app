@@ -126,7 +126,7 @@ a {
 }
 
 #chat-area {
-	width: 85%;
+	width: 80%;
 	border: 1px solid rgb(40,40,40);
 }
 #chat-area iframe {
@@ -138,7 +138,7 @@ a {
 }
 
 #online-status {
-	width: 15%;
+	width: 20%;
 	background-color: rgb(180,180,180);
 	border: 1px solid rgb(40,40,40);
 	vertical-align: top;
