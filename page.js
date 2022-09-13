@@ -1,6 +1,6 @@
 let login_html_content = undefined;
 let username = "", channel = "default"
-
+let server;
 function check_input() {
 	let nick_name = document.getElementById("inp-nickname").value;
 	let warn_element = document.getElementById("warning-msg");
@@ -16,7 +16,7 @@ function check_input() {
 		}
 		warn_element.style.display = "none";
 		username = nick_name;
-		load_chat_interface();
+		connect_to_server();
 	}
 }
 
@@ -41,9 +41,13 @@ function init() {
 	// frm.body.style.backgroundColor = "rgb(140,140,140)"
 }
 
-function load_chat_interface(){
-	document.getElementById("chat-app-state-1").style.display = "none";
-	document.getElementById("chat-app-state-2").style.display = "block";
+function connect_to_server(){
+	server = new WebSocket("ws://localhost:41000");
+	receive_server_response(server);
+	// server.send(JSON.stringify({'etype':'new_client', "name":username}));
+	// document.getElementById("chat-app-state-1").style.display = "none";
+	// document.getElementById("chat-app-state-2").style.display = "block";
+
 }
 
 function exit_chat(){
