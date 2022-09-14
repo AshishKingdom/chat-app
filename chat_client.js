@@ -6,6 +6,13 @@ function check_server_response(ws){
 	}
 }
 
+document.getElementById("message-content")
+.addEventListener("keyup", function(e){
+	if(e.keyCode===13){
+		send_message();
+	}
+});
+
 function send_message() {
 	m = document.getElementById("message-content").value;
 	if(m===undefined||m===""){
