@@ -1,8 +1,12 @@
+/* AshishKingdom */
+
 let login_html_content = undefined;
 let username = "", channel = "default"
 let server;
 let server_status;
 let connected = false;
+
+
 function check_input() {
 	let nick_name = document.getElementById("inp-nickname").value;
 	let warn_element = document.getElementById("warning-msg");

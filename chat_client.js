@@ -1,12 +1,16 @@
+/* AshishKingdom */
+
 function check_server_response(ws){
 	if(connected){
 		ws.send('{"status":"get_clients_status"}');
 	}
 }
 
-function receive_server_response(ws){
-	
+function send_message() {
 
+}
+
+function receive_server_response(ws){
 	ws.addEventListener("message", ({data})=>{
 		resp = JSON.parse(data);
 		switch(resp.status){
