@@ -7,7 +7,12 @@ function check_server_response(ws){
 }
 
 function send_message() {
-
+	m = document.getElementById("message-content").value;
+	if(m===undefined||m===""){
+		return
+	}
+	data = {"status":"new_message_req", "content":m};
+	server.send(JSON.stringify(data));
 }
 
 function receive_server_response(ws){
@@ -39,6 +44,10 @@ function receive_server_response(ws){
 				tmp = "<li><u>"+username+"</u></li>"+tmp;
 				document.getElementById("client-list").innerHTML = tmp;
 				break;
+			case "new_message":
+				tmp = chat_window.body.innerHTML;
+				tmp += "<span><u>"+resp.user+"</u> : "+resp.message_content+"</span><br>";
+				chat_window.body.innerHTML = tmp;
 		}
 	});
 }

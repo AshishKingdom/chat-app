@@ -5,6 +5,7 @@ let username = "", channel = "default"
 let server;
 let server_status;
 let connected = false;
+let chat_window;
 
 
 function check_input() {
@@ -40,9 +41,9 @@ function init() {
 	// for(var i=0;i<200;i++){
 	// 	tmp+="test <br>";
 	// }
-	// var x = document.querySelector("#chat-area iframe");
-	// var frm = (x.contentWindow || x.contentDocument);
-	// if(frm.document)frm=frm.document;
+	var x = document.querySelector("#chat-area iframe");
+	chat_window = (x.contentWindow || x.contentDocument);
+	if(chat_window.document)chat_window=chat_window.document;
 	// frm.body.innerHTML = tmp;
 	// frm.body.style.backgroundColor = "rgb(140,140,140)"
 }
