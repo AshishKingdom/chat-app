@@ -20,6 +20,7 @@ function send_message() {
 	}
 	data = {"status":"new_message_req", "content":m};
 	server.send(JSON.stringify(data));
+	document.getElementById("message-content").value = "";
 }
 
 function receive_server_response(ws){
@@ -36,6 +37,8 @@ function receive_server_response(ws){
 				connected = true;
 				break;
 			case "nickname_accepted":
+					document.getElementById("inp-nickname").value = "";
+
 					document.getElementById("chat-app-state-1").style.display = "none";
 					document.getElementById("chat-app-state-2").style.display = "block";
 					break;
