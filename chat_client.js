@@ -14,7 +14,7 @@ document.getElementById("message-content")
 });
 
 function send_message() {
-	m = document.getElementById("message-content").value;
+	m = document.getElementById("message-content").value.trim();
 	if(m===undefined||m===""){
 		return
 	}

@@ -9,7 +9,7 @@ let chat_window;
 
 
 function check_input() {
-	let nick_name = document.getElementById("inp-nickname").value;
+	let nick_name = document.getElementById("inp-nickname").value.trim();
 	let warn_element = document.getElementById("warning-msg");
 	if(nick_name==""){
 		warn_element.style.display = "block";
