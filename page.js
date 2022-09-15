@@ -7,6 +7,9 @@ let server_status;
 let connected = false;
 let chat_window;
 
+let client_colors = ["#8c0703","#8c5c03","#418c03","#038a8c","#03358c","#43038c","#8c0387","#8c032e"];
+
+let clients_list = [];
 
 function check_input() {
 	let nick_name = document.getElementById("inp-nickname").value.trim();
@@ -44,6 +47,7 @@ function init() {
 	var x = document.querySelector("#chat-area iframe");
 	chat_window = (x.contentWindow || x.contentDocument);
 	if(chat_window.document)chat_window=chat_window.document;
+	chat_window.body.style.fontFamily = "sans-serif";
 	// frm.body.innerHTML = tmp;
 	// frm.body.style.backgroundColor = "rgb(140,140,140)"
 }
@@ -57,10 +61,12 @@ function connect_to_server(){
 
 function exit_chat(){
 	server.send(JSON.stringify({"status":"connection_close_req"}));
-	
+
 	server.close();
 	chat_window.body.innerHTML = "";
 	clearInterval(server_status);
+	clients_list = [];
+
 	document.getElementById("client-list").innerHTML = "";
 	document.getElementById("online-count").innerHTML = "";
 	document.getElementById("chat-app-state-2").style.display = "none";

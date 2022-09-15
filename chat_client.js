@@ -55,8 +55,15 @@ function receive_server_response(ws){
 				document.getElementById("client-list").innerHTML = tmp;
 				break;
 			case "new_message":
+				num_colors = client_colors.length
 				tmp = chat_window.body.innerHTML;
-				tmp += "<span><u>"+resp.user+"</u> : "+resp.message_content+"</span><br>";
+				n = clients_list.findIndex((c)=>
+					(c === resp.user ? true : false)
+					);
+				n = n % num_colors;
+				tmp += "<span style='display:block;background-color:white;padding:4px 0px;'>";
+				tmp += "<b style='color:white;padding:4px 5px;border-radius:4px;";
+				tmp += "background-color:"+client_colors[n]+"'>"+resp.user+"</b> : "+resp.message_content+"</span><br>";
 				chat_window.body.innerHTML = tmp;
 		}
 	});
