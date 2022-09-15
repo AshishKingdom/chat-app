@@ -56,6 +56,13 @@ function connect_to_server(){
 }
 
 function exit_chat(){
+	server.send(JSON.stringify({"status":"connection_close_req"}));
+	
+	server.close();
+	chat_window.body.innerHTML = "";
+	clearInterval(server_status);
+	document.getElementById("client-list").innerHTML = "";
+	document.getElementById("online-count").innerHTML = "";
 	document.getElementById("chat-app-state-2").style.display = "none";
 	document.getElementById("chat-app-state-1").style.display = "block";
 }
