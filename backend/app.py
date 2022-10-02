@@ -60,7 +60,7 @@ async def handler(ws):
 
 
 async def main():
-    async with websockets.serve(handler, "192.168.0.108", 41000):
+    async with websockets.serve(handler, "127.0.0.1", 41000):
         print("Server started")
         await asyncio.Future()
 
