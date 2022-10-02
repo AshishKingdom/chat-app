@@ -65,6 +65,7 @@ function receive_server_response(ws){
 				tmp += "<b style='color:white;padding:4px 5px;border-radius:4px;";
 				tmp += "background-color:"+client_colors[n]+"'>"+resp.user+"</b> : "+resp.message_content+"</span><br>";
 				chat_window.body.innerHTML = tmp;
+				chat_window.scrollTop = chat_window.scrollHeight;
 		}
 	});
 }
