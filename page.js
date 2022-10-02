@@ -53,7 +53,7 @@ function init() {
 }
 
 function connect_to_server(){
-	server = new WebSocket("ws://192.168.0.108:41000");
+	server = new WebSocket("ws://127.0.0.1:41000");
 	receive_server_response(server);
 
 	server_status = setInterval(check_server_response,2500,server);
