@@ -7,6 +7,15 @@
 		<title>Chat Application </title>
 		<link rel="stylesheet" type="text/css" href="page.css">
 		<script type="text/javascript" src="./page.js"></script>
+		 <style>
+          body{
+           transition: .182s;
+          }
+          body.dark{
+            background-color: #212121;
+            color: #e8e8e8;
+          }
+    </style>
 	</head>
 	<body onload="init()">
 		<div id="chat-app-state-2">
@@ -60,5 +69,46 @@
 	<script type="text/javascript" src="./chat_client.js"></script>
 	<button onclick="enableLightMode()">Dark</button>
 	<button onclick="enableDarkMode()">Light</button>
+	<script>
+
+  
+
+checkDarkMode();
+
+  
+
+  function enableLightMode(){
+
+    document.body.classList.remove("dark");
+
+    localStorage.darkMode = false;
+
+  }
+
+  function enableDarkMode(){
+
+    document.body.classList.add("dark");
+
+    localStorage.darkMode = true;
+
+  }
+
+  function checkDarkMode(){
+
+    if(localStorage.darkMode){
+
+      document.body.classList.add("dark");
+
+    }
+
+    else{
+
+      document.body.classList.remove("dark");
+
+    }
+
+  }
+
+</script>
 	</body>
 </html>
