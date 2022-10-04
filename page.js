@@ -11,6 +11,21 @@ let client_colors = ["#8c0703","#8c5c03","#418c03","#038a8c","#03358c","#43038c"
 
 let clients_list = [];
 
+const getPreferredColorScheme = () => {
+  const darkQuery = "(prefers-color-scheme: dark)";
+  const darkMQL = window.matchMedia ? window.matchMedia(darkQuery) : {};
+  if (darkMQL.media === darkQuery && darkMQL.matches) {
+   return "dark";
+  }
+  return "default";
+};
+document.documentElement.setAttribute("data-color-scheme", getPreferredColorScheme());
+
+document.getElementById("button").onclick = () => {
+  const colorScheme = document.documentElement.getAttribute("data-color-scheme");
+  document.documentElement.setAttribute("data-color-scheme", colorScheme === "default" ? "dark" : "default");
+};
+
 function check_input() {
 	let nick_name = document.getElementById("inp-nickname").value.trim();
 	let warn_element = document.getElementById("warning-msg");
