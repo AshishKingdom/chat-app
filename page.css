@@ -6,13 +6,7 @@ body {
 	font-family: sans-serif;
 	background-color: rgb(220, 220, 220);
 }
-body.dark{
 
-  background-color: #212121; /* When dark mode is on, set background color to black */
-
-  color: #e8e8e8; /* When dark mode is on, set text color to white */
-
-}
 .dark-bg {
 	background-color: rgb(50, 50, 50);
 }
