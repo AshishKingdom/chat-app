@@ -4,15 +4,15 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: sans-serif;
-	background-color: rgb(220, 220, 220);
+	background-color: rgb(227, 232, 247);
 }
 
 .dark-bg {
-	background-color: rgb(50, 50, 50);
+	background-color: #193498;
 }
 .login-box {
-	border: 2px solid rgb(40,40,40);
-	background-color: rgb(200, 200, 200);
+	border: 2px solid #193498;
+	background-color:  rgb(227, 232, 247);
 	/*padding: 10px;*/
 	border-radius: 5px;
 	height: 350px;
@@ -33,7 +33,7 @@ body {
     text-align: center;
     padding: 3pt;
     border-radius: 3px;
-    border: rgb(40,40,40) 1px solid;
+    border: #193498 1px solid;
     display: block;
 }
 
@@ -48,19 +48,19 @@ body {
 	margin: 0pt auto;
 	display: block;
 	padding: 5pt;
-	background-color: rgb(100,100,100);
+	background-color: #193498 ;
 	color: white;
 	border: none;
 	border-radius: 3px;
 }
 
 .page-btn:hover {
-	background-color: rgb(40,40,40);
+	background-color: #091e6b ;
 	cursor: pointer;
 }
 
 .login-heading-1 {
-	background-color: rgb(50,50,50);
+	background-color: #193498;
 	color : white;
 	font-size: 24pt;
 	text-align: center;
@@ -107,7 +107,7 @@ a {
 }
 
 #navbar {
-	background-color: rgb(50,50,50);
+	background-color: #193498;
 	color: white;
 	padding: 16px 16px;
 	height: 10%;
@@ -129,7 +129,7 @@ a {
 
 #chat-area {
 	width: 80%;
-	border: 1px solid rgb(40,40,40);
+	border: 1px solid #193498 ;
 }
 #chat-area iframe {
 	border: none;
@@ -141,8 +141,8 @@ a {
 
 #online-status {
 	width: 20%;
-	background-color: rgb(180,180,180);
-	border: 1px solid rgb(40,40,40);
+	background-color: white;
+	border: 1px solid #193498;
 	vertical-align: top;
 	text-align: center;
 }
