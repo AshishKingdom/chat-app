@@ -12,6 +12,7 @@ body {
 }
 .login-box {
 	border: 2px solid rgb(40,40,40);
+	margin: 1px;
 	background-color: rgb(200, 200, 200);
 	/*padding: 10px;*/
 	border-radius: 5px;
@@ -49,7 +50,7 @@ body {
 	display: block;
 	padding: 5pt;
 	background-color: rgb(100,100,100);
-	color: white;
+	color: rgb(255,255,255);
 	border: none;
 	border-radius: 3px;
 }
@@ -61,7 +62,7 @@ body {
 
 .login-heading-1 {
 	background-color: rgb(50,50,50);
-	color : white;
+	color : #FFFFFF;
 	font-size: 24pt;
 	text-align: center;
 	padding: 10pt;
@@ -70,7 +71,7 @@ body {
 
 #main-heading {
 	/*background-color: rgb(50, 50, 50);*/
-	color : white;
+	color : #FFFFFF;
 	text-align: center;
 	font-size: 36pt;
 	/*margin: 0 0 15pt 0;*/
@@ -96,7 +97,7 @@ body {
 	/*position: absolute;*/
 	/*width: 100%;*/
 	/*bottom: 0;*/
-	color: white;
+	color: rgb(255,255,255);
 	/*padding: 20px 0px;*/
 	text-align: center;
 }
@@ -108,7 +109,7 @@ a {
 
 #navbar {
 	background-color: rgb(50,50,50);
-	color: white;
+	color: #FFFFFF;
 	padding: 16px 16px;
 	height: 10%;
 }
